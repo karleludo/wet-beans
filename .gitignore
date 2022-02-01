@@ -12,3 +12,5 @@
 # Private Node Modules
 node_modules/
 creds.js
+
+trial.js
