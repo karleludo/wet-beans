@@ -66,4 +66,8 @@ input:focus::placeholder {
     transition: opacity 0.3s ease;
 }
 
+form {
+    margin: 1.5rem 0 1.5rem 0;
+}
+
 
