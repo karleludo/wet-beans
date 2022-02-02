@@ -6,56 +6,47 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>karleludo: Coffee Ratio Calculator</title>
     <script src="dist/app.js"></script>
-    <style>
-        * { text-align: center; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;}
-        body { background-color: #FFFAF1; color: #5b3a00;  }
-
-		h1 { text-align: center; color:#724900; }
-        p { text-align: center;}
-        input,label {display:block}
-        .container { width: 500px;
-                     height: 150px;
-                     margin: 0 auto;}
-    </style>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <section>
-        <h1>Coffee Calculator</h1>
-        <p>coffee ratio calculator by Karl Eludo.</p>
-    </section>
+    <!-- header of the page -->
+    <header>
+        <h1>Coffee Ratio Calculator</h1>
+        <p>Coffee ratio calculator for brewing coffee at home</p>
+    </header>
 
-    <!-- you're taking too much time on this... your html and css skills are rusty(eww) -->
-    <form name="calc">
-        <div class="container">
-            <section id="ratio">
-                <h3>Ratio</h3>
-                <div style="float:left; margin: 1rem;">
-                    <label for="ratio-coffee">Coffee</label>
-                    <input id="ratio-coffee" type="number" value="3"name="ratio-coffee">
-                </div>
-                <div style="float:left; margin: 1rem;">
-                    <label for="ratio-water">Water</label>
-                    <input id="ratio-water" type="number" value="50"name="ratio-water">
-                </div>
-            </section>
-        </div>
-        <button type="button" id="set-ratio" onclick="setRatio()">Set Ratio</button>
-        <br style="clear:both;" />
+    <!-- main content -->
+    <main>
+        <form name="form-ratio" autocomplete="off">
+            <div class="input-container">
+                <label for="ratio-coffee">Coffee</label>
+                <input name="ratio-coffee" type="number" placeholder="0">   
+            </div>
+            <span class="colon">:</span>
+            <div class="input-container">
+                <label for="ratio-water">Water</label>
+                <input name="ratio-water" type="number" placeholder="0">
+            </div>
+            
+        </form>
+            
+        <form name="form-recipe" autocomplete="off">
+            <div class="input-container">
+                <label for="recipe-coffee">Coffee</label>
+                <input name="recipe-coffee" type="number" placeholder="0">   
+            </div>
+            <span class="colon">:</span>
+            <div class="input-container">
+                <label for="recipe-coffee">Coffee</label>
+                <input name="recipe-coffee" type="number" placeholder="0">   
+            </div>
 
-        <div class="container">
-            <section id="result">
-                <h3>Result</h3>
-                <div style="float:left; margin: 1rem;">
-                    <label for="result-coffee">Coffee(g)</label>
-                    <input id="result-coffee" type="number" value = "15" name="result-coffee">
-                </div>
-                <div style="float:left; margin: 1rem;">
-                    <label for="result-water">Water(g)</label>
-                    <input id="result-water" type="number" name="result-water">
-                </div>
-            </section>
-        </div>
-        <button type="button" id="see-result" onclick="getResult()" >calculate!</button>
-    </form>
+        </form>
+    </main>
+
+    <!-- footer -->
+    <footer>
+
+    </footer>
 </body>
 </html>
