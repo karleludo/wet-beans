@@ -39,5 +39,3 @@ Object.defineProperty(objectRecipeWater, "value", {
         recipeWater.value = newValue;
     }
 });
-function CalculateRecipeCoffee() {
-}
