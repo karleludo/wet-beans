@@ -1,4 +1,4 @@
-"use strict";
+
 const ratioCoffee = document.getElementById("ratio-coffee");
 let objectRatioCoffee = {};
 const ratioWater = document.getElementById("ratio-water");
