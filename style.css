@@ -88,3 +88,23 @@ p {
 }
 
 
+footer {
+    position: absolute;
+    height: 2rem;
+    width: 100vw;
+    flex-direction: row;
+    align-content: flex-end;
+    overflow: hidden;
+    bottom: 0;
+    left: 0;
+    text-align: center;
+    margin-bottom: 1em;
+}
+
+footer ul{
+    list-style: none;
+}
+li{
+    display: inline;
+    margin: 0 1rem 0;
+}
