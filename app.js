@@ -1,17 +1,16 @@
+//initialize dom elements
 const ratioCoffee = document.getElementById("ratio-coffee");
-
 const ratioWater = document.getElementById("ratio-water");
-
 const recipeCoffee = document.getElementById("recipe-coffee");
-
 const recipeWater = document.getElementById("recipe-water");
 
+//instantiate some objects
 let objectRatioCoffee = {}
 let objectRatioWater = {};
 let objectRecipeCoffee = {};
 let objectRecipeWater = {};
 
-
+//bind input to object for data-binding
 Object.defineProperty(objectRatioCoffee, "value", {
     get() {
         return parseInt(ratioCoffee.value);
@@ -59,7 +58,9 @@ let getResultWater = () =>{
     return result;
 }
 
+// set inital value of objectRecipeWater from default initial values
 getResultWater();
+
 let getResultCoffee = () =>{
     let result;
     result = objectRecipeWater.value/(objectRatioWater.value/objectRatioCoffee.value);
@@ -67,14 +68,16 @@ let getResultCoffee = () =>{
     return result;
 }
 
+//handle recipeCoffee input change
 let recipeCoffeeChangeHandler = function() {
     getResultWater();
 }
-
+//handle recipeWater input change
 let recipeWaterChangeHandler = function() {
     getResultCoffee();
 }
 
+//eventlisteners for different browsers?
 if(recipeCoffee.addEventListener)
     recipeCoffee.addEventListener("change", recipeCoffeeChangeHandler, false);
 
