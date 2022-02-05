@@ -37,6 +37,8 @@ label {
     font-size: 3rem;
     color: #4f4a3b;
     opacity: 0.5;
+    display: flex;
+    align-items: center;
 }
 
 
