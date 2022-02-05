@@ -1,12 +1,17 @@
-
 const ratioCoffee = document.getElementById("ratio-coffee");
-let objectRatioCoffee = {};
+
 const ratioWater = document.getElementById("ratio-water");
-let objectRatioWater = {};
+
 const recipeCoffee = document.getElementById("recipe-coffee");
-let objectRecipeCoffee = {};
+
 const recipeWater = document.getElementById("recipe-water");
+
+let objectRatioCoffee = {}
+let objectRatioWater = {};
+let objectRecipeCoffee = {};
 let objectRecipeWater = {};
+
+
 Object.defineProperty(objectRatioCoffee, "value", {
     get() {
         return parseInt(ratioCoffee.value);
@@ -39,5 +44,57 @@ Object.defineProperty(objectRecipeWater, "value", {
         recipeWater.value = newValue;
     }
 });
-function CalculateRecipeCoffee() {
+
+//set initial values
+objectRatioCoffee.value = 3;
+objectRatioWater.value = 50;
+objectRecipeCoffee.value = 15;
+
+
+
+let getResultWater = () =>{
+    let result;
+    result = (objectRatioWater.value/objectRatioCoffee.value)*objectRecipeCoffee.value;
+    result = objectRecipeWater.value = Math.round(result);
+    return result;
 }
+
+getResultWater();
+let getResultCoffee = () =>{
+    let result;
+    result = objectRecipeWater.value/(objectRatioWater.value/objectRatioCoffee.value);
+    objectRecipeCoffee.value = result;
+    return result;
+}
+
+let recipeCoffeeChangeHandler = function() {
+    getResultWater();
+}
+
+let recipeWaterChangeHandler = function() {
+    getResultCoffee();
+}
+
+if(recipeCoffee.addEventListener)
+    recipeCoffee.addEventListener("change", recipeCoffeeChangeHandler, false);
+
+else if(recipeCoffee.attachEvent)
+    recipeCoffee.attachEvent("onchange", recipeCoffeeChangeHandler);
+
+else
+    recipeCoffee.onchange = recipeCoffeeChangeHandler;
+
+
+if(recipeWater.addEventListener)
+    recipeWater.addEventListener("change", recipeWaterChangeHandler, false);
+
+else if(recipeWater.attachEvent)
+    recipeWater.attachEvent("onchange", recipeWaterChangeHandler);
+
+else
+    recipeWater.onchange = recipeWaterChangeHandler;
+
+
+
+
+
