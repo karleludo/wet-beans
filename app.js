@@ -49,6 +49,7 @@ objectRatioCoffee.value = 3;
 objectRatioWater.value = 50;
 objectRecipeCoffee.value = 15;
 
+
 let getResultWater = () => {
   let result;
   result =
@@ -79,6 +80,11 @@ let recipeWaterChangeHandler = function () {
   getResultCoffee();
 };
 
+let ratioChangeHandler = function () {
+  getResultCoffee();
+  getResultWater();
+};
+
 //eventlisteners for different browsers?
 if (recipeCoffee.addEventListener)
   recipeCoffee.addEventListener("change", recipeCoffeeChangeHandler, false);
@@ -91,3 +97,17 @@ if (recipeWater.addEventListener)
 else if (recipeWater.attachEvent)
   recipeWater.attachEvent("onchange", recipeWaterChangeHandler);
 else recipeWater.onchange = recipeWaterChangeHandler;
+
+
+//adding change event to both ratio inputs
+if (ratioCoffee.addEventListener)
+  ratioCoffee.addEventListener("change", ratioChangeHandler, false);
+else if (recipeWater.attachEvent)
+  ratioCoffee.attachEvent("onchange", ratioChangeHandler);
+else ratioCoffee.onchange = ratioChangeHandler;
+
+if (ratioWater.addEventListener)
+  ratioWater.addEventListener("change", ratioChangeHandler, false);
+else if (recipeWater.attachEvent)
+  ratioWater.attachEvent("onchange", ratioChangeHandler);
+else ratioWater.onchange = ratioChangeHandler;
