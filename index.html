@@ -23,12 +23,12 @@
         <form name="form-ratio" autocomplete="off">
             <div class="input-container">
                 <label for="ratio-coffee">Coffee</label>
-                <input id="ratio-coffee" name="ratio-coffee" type="number">
+                <input id="ratio-coffee" name="ratio-coffee" type="number" min="0" max="999" oninput="validity.valid||(value='0')">
             </div>
             <span class="colon">:</span>
             <div class="input-container">
                 <label for="ratio-water">Water</label>
-                <input id="ratio-water" name="ratio-water" type="number">
+                <input id="ratio-water" name="ratio-water" type="number" min="0" max="999" oninput="validity.valid||(value='0')">
             </div>
         </form>
 
@@ -43,12 +43,12 @@
         <form name="form-recipe" autocomplete="off">
             <div class="input-container">
                 <label for="recipe-coffee">Coffee(g)</label>
-                <input id="recipe-coffee" name="recipe-coffee" type="number">
+                <input id="recipe-coffee" name="recipe-coffee" type="number" min="0" max="999"">
             </div>
             <span class="colon">:</span>
             <div class="input-container">
                 <label for="recipe-coffee">Water(g)</label>
-                <input id="recipe-water" name="recipe-coffee" type="number">
+                <input id="recipe-water" name="recipe-coffee" type="number" min="0" max="999"">
             </div>
 
         </form>
