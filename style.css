@@ -109,3 +109,12 @@ footer li{
 footer ul{
     list-style: none;
 }
+
+nav li{
+    display: inline;
+    margin: 0 1rem 0;
+}
+
+nav ul{
+    list-style: none;
+}
