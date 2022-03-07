@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { FormBuilder, FormGroup } from '@angular/forms';
 
 
 @Component({
@@ -7,24 +8,26 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./calculator.component.css']
 })
 export class CalculatorComponent implements OnInit {
-  CoffeeInput: number;
-  WaterInput: number;
+  calculatorFormGroup!: FormGroup;
 
-  CoffeeResult: number;
-  WaterResult: number;
+  coffeeInput!: number;
+  waterInput!: number;
+
+  coffeeResult!: number;
+  waterResult!: number;
 
 
-  constructor() {
-
-    this.CoffeeInput = 0;
-    this.WaterInput = 0;
-
-    this.CoffeeResult = 0;
-    this.WaterResult = 0;
-    
-   }
+  constructor(private fb : FormBuilder) {}
 
   ngOnInit(): void {
+    this.calculatorFormGroup = this.fb.group({
+
+      coffeeInput: [],
+      waterInput: [],
+
+      coffeeResult: [],
+      waterResult: []
+    });
   }
 
 }
