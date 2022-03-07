@@ -1,3 +1,5 @@
+NOTE: current main branch not yet built
+
 # WetBeans
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 13.2.2.
