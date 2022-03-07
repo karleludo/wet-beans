@@ -1,0 +1,25 @@
+<div class="container">
+    <div [formGroup]="calculatorFormGroup">
+        <div class="container">
+            <h2>Set coffee to water ratio</h2>
+            <app-special-input labelName="Coffee" formControlName="coffeeInput"></app-special-input>
+            <span>:</span>
+            <app-special-input labelName="Water" formControlName="waterInput"></app-special-input>
+            <p>This is the ratio of coffee grounds to water. The most common for pour-over is the v60, 3:50 ratio. Some
+                other examples are 1:15 used by 2016 World
+                Brewer's Cup Champion, Tetsu Kasuya for his v60 method. I personally use 1:18 for french press.</p>
+        </div>
+
+        <div class="container">
+            <h2>Resulting coffee recipe</h2>
+            <app-special-input labelName="Coffee" formControlName="coffeeResult"></app-special-input>
+            <span>:</span>
+            <app-special-input labelName="Water" formControlName="waterResult"></app-special-input>
+            <p>This is the resulting coffee recipe.</p>
+        </div>
+    </div>
+</div>
+
+<pre>
+    {{ calculatorFormGroup.value | json}}
+</pre>

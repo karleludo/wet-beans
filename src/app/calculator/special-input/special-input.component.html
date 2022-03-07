@@ -1,0 +1,10 @@
+<div class="container">
+    <div class="container">
+        <!-- TODO: attach this component form element to the parent form -->
+        <label>{{ labelName }}</label>
+        <input type="number" 
+        [ngModel]="value" 
+        (ngModelChange)="onChange($event)">
+
+    </div>
+</div>
